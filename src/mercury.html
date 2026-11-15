@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mercury</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-$END$
+<body class="mercury">
+<nav class="navbar">
+    <ul>
+        <li>
+            <div class="planet" id="mercury">
+                <a href="mercury.html">Mercury</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="venus">
+                <a href="venus.html">Venus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="earth">
+                <a href="earth.html">Earth</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="mars">
+                <a href="mars.html">Mars</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="jupiter">
+                <a href="jupiter.html">Jupiter</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="saturn">
+                <a href="saturn.html">Saturn</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="uranus">
+                <a href="uranus.html">Uranus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="neptune">
+                <a href="neptune.html">Neptune</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!--End of navbar, real code below-->
+<h1 class="mercury">Mercury!</h1>
+<h2 class="mercury">Welcome to Mercury</h2>
+
+<hr>
+<pre class="mercury">
+    Mercury is the first planet out of the solar system we have. This means it is the closest to the sun.
+</pre>
+<hr>
+<h3 class="mercury">Here are some fun facts about mercury</h3>
+<img src="/src/images/mercury1.png" height="500" id="img1" alt="Mercury image 1">
+<pre class="mercury">
+    Mercury has the shorted orbit around the sun. This makes sense as it is the
+    closest to the sun, making its distance
+    not very much to traverse.
+
+    The surface of Mercury is covered with craters from astroids and it has a
+    very rocky environment. This gives it a
+    look similar to the moon.
+
+    Despite being so close to the sun, parts of Mercury's surface has ice on it.
+    Certain craters that don't get sunlight
+    don't get heated up.
+</pre>
+<div class="mercury-orbit">
+    <p class="mercury">See your age in Mercury years! (=88 Earth days)</p>
+    <label class="mercury" for="earthAge">Your age in Earth years:</label>
+    <input type="number" id="earthAge" min="18" max="100" placeholder="25">
+    <button type="button" id="mercuryAgeButton">Calculate</button>
+    <p class="mercury" id="mercuryAgeResult"></p>
+</div>
+<div class="imageIndent">
+    <img src="/src/images/mercury2.jpg" height="500" id="img2" alt="Mercury image 2">
+</div>
+<pre class="mercury-rainbow">
+    Surface temperature of Mercury ranges from -180°C to 430°C
+
+    Mercury has a radius of 2,440 km, making it the smallest planet.
+</pre>
 </body>
 </html>

@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-$END$
+<body class="venus">
+<nav class="navbar">
+    <ul>
+        <li>
+            <div class="planet" id="mercury">
+                <a href="mercury.html">Mercury</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="venus">
+                <a href="venus.html">Venus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="earth">
+                <a href="earth.html">Earth</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="mars">
+                <a href="mars.html">Mars</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="jupiter">
+                <a href="jupiter.html">Jupiter</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="saturn">
+                <a href="saturn.html">Saturn</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="uranus">
+                <a href="uranus.html">Uranus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="neptune">
+                <a href="neptune.html">Neptune</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<h1>Venus!</h1>
+<h2>Welcome to Venus</h2>
+
+<hr>
+<div class="venus-colors">
+    <p class="venus-intro">Click the button to reveal the various colors of Venus!</p>
+    <button type="button" id="venusColorButton" aria-expanded="false">Show colors</button>
+    <div id="venusColorPanel" hidden>
+        <div class="venus-swatch" id="venusClouds">
+            <h5>The surface &mdash; #D80000</h5>
+            <p>
+                The first is the orange color most people tend to notice about Venus.
+                This stems mainly from the sulphoric acids, giving it a bright orange-reddish contrast.
+        </div>
+        <div class="venus-swatch" id="venusSurface">
+            <h5>The surface &mdash; #FFFFB8</h5>
+            <p>
+                Around the clouds, away from the red, Venus' clouds do filter out the light from the sun, giving it a white-yellowish look.
+            </p>
+        </div>
+    </div>
+</div>
+<pre class="venus">
+    Venus is the second planet closest planet to the sun.
+</pre>
+<h4 class="venus">Here are some fun facts about Venus</h4>
+<img src="/src/images/venus1.png" height="500" id="img1" alt="Mercury image 1">
+<pre class="venus">
+    Venus although being the second closest planet to the sun. It is actually
+    hotter than Mercury, coming in at an average temperature of 462°C.
+
+    Venus is a very bright celestial body. Due to its heavy sulphoric atmosphere,
+    it can be spotted even in daytime due to its bright orange appearance.
+
+    The atmospheric pressure on Venus is very intense, so intense that it can practically
+    crush most people. It is 90 times stronger than Earth's.
+</pre>
+<div class="imageIndent">
+    <img src="/src/images/venus2.webp" height="500" id="img2" alt="Mercury image 2">
+</div>
+<pre class="venus">
+    Venus' trip around the sun only takes about 224.7 Earth days.
+
+    Venus was first observed through a telescope by Galileo Galilei (famous astronomer).
+    Most astoningshly this happened in 1610!
+</pre>
 </body>
 </html>

@@ -1,10 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Earth</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-$END$
+<body class="earth">
+<nav class="navbar">
+    <ul>
+        <li>
+            <div class="planet" id="mercury">
+                <a href="mercury.html">Mercury</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="venus">
+                <a href="venus.html">Venus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="earth">
+                <a href="earth.html">Earth</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="mars">
+                <a href="mars.html">Mars</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="jupiter">
+                <a href="jupiter.html">Jupiter</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="saturn">
+                <a href="saturn.html">Saturn</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="uranus">
+                <a href="uranus.html">Uranus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="neptune">
+                <a href="neptune.html">Neptune</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="earth-heading">
+    <h1>Earth!</h1>
+    <h2 class="earth">Welcome to Earth</h2>
+</div>
+<hr>
+<pre class="earth">
+    Earth is the third planet closest planet to the sun, and our home!
+</pre>
+<div class="earth-h4">
+    <h3 class="earth">Here are some fun facts about Earth</h3>
+</div>
+<div class="earth-green">
+    <img src="/src/images/earth1.png" height="500" id="img1" alt="Mercury image 1">
+    <pre class="earth">
+    The name earth itself comes from old English and Gemanic origins, which contrasts
+    heavily with the other planets that get their names from greek/roman gods and goddesses.
+
+    Earth is only planet that we know of with water on its surface. This is crucial, as water is necessary to 
+    sustain life.
+
+    Earth's diameter is 7,926 miles (12,756 kilometers), making it the fifth largest planet in our solar system.
+</pre>
+</div>
+<div class="imageIndent-earth">
+    <img src="/src/images/earth2.jpeg" height="500" id="img2" alt="Mercury image 2">
+<pre class="earth">
+    Our planet hosts the moon, our only moon. The moon is responsible for our 
+    tides and balance.
+
+    Most people believe Earth is a round planet. It is not, Earth is known as 
+    an oblate spheroid. This is due for a number of reasons, some of which is 
+    mass distribution and gravitational pressures.
+</pre>
+</div>
+<div class="earth-cleanup">
+    <p class="earth-cleanup-text">Trash is harmful to the planet, always clean up!</p>
+    <button type="button" id="cleanTrashButton">Click here to clean</button>
+    <p class="earth-cleanup-text" id="cleanTrashResult"></p>
+    <img src="/src/images/trash.png" id="trashImage" height="300" alt="Trash left on the ground">
+</div>
 </body>
 </html>
