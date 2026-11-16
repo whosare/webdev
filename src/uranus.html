@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Earth</title>
+    <title>Uranus</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body class="jupiter">
+<body class="uranus">
 <nav class="navbar">
     <ul>
         <li>
@@ -59,33 +60,53 @@
         </li>
     </ul>
 </nav>
-<div class="jupiter">
-    <h1>Jupiter!</h1>
-    <h2 class="earth">Welcome to Jupiter</h2>
+<div class="uranus-heading">
+    <h1 class="uranus">Uranus!</h1>
+    <h2 class="uranus">Welcome to Uranus</h2>
 </div>
 
 <hr>
-<pre class="earth">
-    Saturn is the sixth planet from the sun, and the second largest next to Jupiter.
+<pre class="uranus">
+    Uranus is the seventh planet from the sun, and one of the gas giants.
 </pre>
-<h4 class="jupiter">Here are some fun facts about Jupiter</h4>
-<img src="/src/images/earth1.png" height="500" id="img1" alt="Mercury image 1">
-<pre class="earth">
-    Uranus is an ice giant, meanining it is made of mostly water, methane, and ammonia, which gives it its
-    signature blue look.
+<h3 class="uranus">Here are some fun facts about Uranus</h3>
+<div class="uranus-first">
+    <img src="/src/images/uranus1.webp" height="500" id="img1" alt="Uranus full planet">
+    <pre class="uranus">
+        Uranus is an ice giant, meanining it is made of mostly water, methane, and ammonia,
+        which gives it its signature blue look.
 
-    Uranus has a diameter of 31,763 miles (51,118 kilometers), making it 4 times bigger than Earth.
+        Uranus has a diameter of 31,763 miles (51,118 kilometers), making it 4 times bigger
+        than Earth.
 
-    Funnily enough, Uranus takes just 17 hours to spin on its axis, making a full day. However, a full year would take
-    84 Earth years.
+        Funnily enough, Uranus takes just 17 hours to spin on its axis, making a full day.
+        However, a full year would take 84 Earth years.
 </pre>
-<div class="imageIndent">
-    <img src="/src/images/earth2.jpeg" height="500" id="img2" alt="Mercury image 2">
 </div>
-<pre class="venus">
-    Similar to Saturn, Uranus has rings. It has a dark/grey inner ring, and a blue/red outer ring.
+<div class="uranus-second">
+    <div class="imageIndent">
+        <img src="/src/images/uranus2.jpeg" height="500" id="img2" alt="Uranus with rings">
+    </div>
+    <pre class="uranus">
+        Similar to Saturn, Uranus has rings. It has a dark/grey inner ring, and a
+        blue/red outer ring.
 
-    Uranus' moons are named after Shakespeare's characters, such as Prospero, Cordelia, and Titania.
-</pre>
+        Uranus' moons are named after Shakespeare's characters, such as Prospero,
+        Cordelia, and Titania.
+    </pre>
+</div>
+<div class="diamond-rain">
+    <p class="diamond-rain-text">Click here for an extra fun fact!</p>
+    <button type="button" id="diamondButton" aria-expanded="false">Read more</button>
+    <div id="diamondPanel" hidden>
+        <pre class="uranus">
+    Did you know that it rains diamonds inside of the planet
+    Uranus? The methane gas inside Uranus separates the
+    hydrogen and carbon, which in combination with
+    the heat and pressure on Uranus, turns the carbon
+    into diamonds!
+        </pre>
+    </div>
+</div>
 </body>
 </html>

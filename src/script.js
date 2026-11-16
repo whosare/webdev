@@ -46,7 +46,7 @@ function mercuryYears(earthYears) {
 function showMercuryAge() {
     const years = Number(earthAge.value);
 
-    // Catch an empty box, text, or a negative age
+    // incorrect value, negative age, or empty
     if (earthAge.value === '' || Number.isNaN(years) || years < 0) {
         mercuryAgeResult.textContent = 'Please enter your age as a positive number.';
         return;
@@ -60,11 +60,8 @@ function showMercuryAge() {
 if (mercuryAgeButton) {
     mercuryAgeButton.addEventListener('click', showMercuryAge);
 
-    // Pressing Enter in the box works too
-    earthAge.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+    earthAge.addEventListener('click', (event) => {
             showMercuryAge();
-        }
     });
 }
 
@@ -118,7 +115,7 @@ function launchSpaceship() {
     hasLaunched = !hasLaunched;
 
     if (hasLaunched) {
-        // How far the ship can slide before it bumps into Mars
+        // distance of slide between ship and mars
         const distance = marsFlightPath.clientWidth - marsCartoon.clientWidth - spaceship.clientWidth;
 
         spaceship.style.transform = `translateX(${distance}px)`;
@@ -161,4 +158,83 @@ if (jupiter) {
     jupiter.addEventListener('mouseenter', () => { speed = 30; });
     jupiter.addEventListener('mouseleave', () => { speed = 6; });
     requestAnimationFrame(rotateJ);
+}
+
+//Saturn feature
+const ringsButton = document.getElementById('ringsButton');
+const saturnImage = document.getElementById('saturnImage');
+
+const SATURN_WITH_RINGS = '/src/images/saturnWith.png';
+const SATURN_WITHOUT_RINGS = '/src/images/saturnwithout.webp';
+
+let hasRings = true;
+
+// We swap src to change pictures
+function toggleRings() {
+    hasRings = !hasRings;
+
+    if (hasRings) {
+        saturnImage.src = SATURN_WITH_RINGS;
+        saturnImage.alt = 'Saturn with its rings';
+        ringsButton.textContent = 'Remove rings';
+    } else {
+        saturnImage.src = SATURN_WITHOUT_RINGS;
+        saturnImage.alt = 'Saturn without its rings';
+        ringsButton.textContent = 'Put rings back';
+    }
+}
+
+// Only on the Saturn page
+if (ringsButton) {
+    ringsButton.addEventListener('click', toggleRings);
+}
+
+
+//Uranus feature
+const diamondButton = document.getElementById('diamondButton');
+const diamondPanel = document.getElementById('diamondPanel');
+
+function toggleDiamondFact() {
+    diamondPanel.hidden = !diamondPanel.hidden;
+
+    diamondButton.textContent = diamondPanel.hidden ? 'Read more' : 'Read less';
+    diamondButton.setAttribute('aria-expanded', String(!diamondPanel.hidden));
+}
+
+// Only on the Uranus page
+if (diamondButton) {
+    diamondButton.addEventListener('click', toggleDiamondFact);
+}
+
+
+//Neptune feature
+const neptuneSpeed = document.getElementById('neptuneSpeed');
+const neptuneTravelButton = document.getElementById('neptuneTravelButton');
+const neptuneTravelResult = document.getElementById('neptuneTravelResult');
+
+const MILES_TO_NEPTUNE = 2800000000;   // 2.8 billion miles from Earth
+
+function showTravelTime() {
+    const speed = Number(neptuneSpeed.value);
+
+    // allow only non empty, non negative
+    if (neptuneSpeed.value === '' || Number.isNaN(speed) || speed <= 0) {
+        neptuneTravelResult.textContent = 'Please enter a speed greater than 0.';
+        return;
+    }
+
+    const hours = MILES_TO_NEPTUNE / speed;
+    neptuneTravelResult.textContent = `At ${speed} mph it would take ${hours.toLocaleString()} hours.`;
+}
+
+// Only on the Neptune page
+if (neptuneTravelButton) {
+    neptuneTravelButton.addEventListener('click', showTravelTime);
+
+    // Pressing Enter in the box works too
+    neptuneSpeed.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            showTravelTime();
+        }
+    });
 }
