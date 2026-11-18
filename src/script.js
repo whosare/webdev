@@ -1,12 +1,12 @@
 //Galaxy feature
 const galaxy = document.getElementById('galaxyimg');
 
-let angle = 0;          // current rotation in degrees
-let speed = 6;          // degrees per second (a full turn takes 60s)
+let angle = 0; //current rotation in degrees
+let speed = 6; //degrees per second (a full turn takes 60s)
 let spinning = true;
 let lastTime = null;
 
-// Runs about 60 times a second, in sync with the screen
+//Runs about 60 times a second, once per second
 function rotate(time) {
     if (lastTime !== null && spinning) {
         const seconds = (time - lastTime) / 1000; 
@@ -17,46 +17,55 @@ function rotate(time) {
     requestAnimationFrame(rotate);
 }
 
-// only should be on the galaxy page
+//only should be on the galaxy page
 if (galaxy) {
-    // Click the galaxy to pause or resume
-    galaxy.addEventListener('click', () => {
-        spinning = !spinning;
-    });
-
-    // Spin faster while mouse hover
-    galaxy.addEventListener('mouseenter', () => { speed = 30; });
-    galaxy.addEventListener('mouseleave', () => { speed = 6; });
     requestAnimationFrame(rotate);
 }
+
+
+//Sun feature
+const lifecycleButton = document.getElementById('lifecycleButton');
+const lifecyclePanel = document.getElementById('lifecyclePanel');
+
+function toggleLifecycle() {
+    lifecyclePanel.hidden = !lifecyclePanel.hidden;
+
+    lifecycleButton.textContent = lifecyclePanel.hidden ? 'Show lifecycle' : 'Hide lifecycle';
+    lifecycleButton.setAttribute('aria-expanded', String(!lifecyclePanel.hidden));
+}
+
+// Only on the Sun page
+if (lifecycleButton) {
+    lifecycleButton.addEventListener('click', toggleLifecycle);
+}
+
+
 
 //Mercury feature
 const earthAge = document.getElementById('earthAge');
 const mercuryAgeButton = document.getElementById('mercuryAgeButton');
 const mercuryAgeResult = document.getElementById('mercuryAgeResult');
 
-const MERCURY_YEAR_IN_DAYS = 88;   // one trip around the sun
+const MERCURY_YEAR_IN_DAYS = 88;   //one trip around the sun
 const EARTH_YEAR_IN_DAYS = 365;
 
-// x Earth years = (x * 365) / 88 = 87.1 Mercury years
+//x Earth years = (x * 365) / 88
 function mercuryYears(earthYears) {
-    return (earthYears * EARTH_YEAR_IN_DAYS) / MERCURY_YEAR_IN_DAYS;
+    return (earthYears * EARTH_YEAR_IN_DAYS) / MERCURY_YEAR_IN_DAYS;//Calculation done in days
 }
 
 function showMercuryAge() {
     const years = Number(earthAge.value);
-
-    // incorrect value, negative age, or empty
+    //incorrect value, negative age, or empty
     if (earthAge.value === '' || Number.isNaN(years) || years < 0) {
         mercuryAgeResult.textContent = 'Please enter your age as a positive number.';
         return;
     }
-
     const result = mercuryYears(years);
     mercuryAgeResult.textContent = `${years} Earth years = ${result.toFixed(1)} Mercury years!`;
 }
 
-// Only on the Mercury page
+//Only on the Mercury page
 if (mercuryAgeButton) {
     mercuryAgeButton.addEventListener('click', showMercuryAge);
 
@@ -69,7 +78,7 @@ if (mercuryAgeButton) {
 const venusColorButton = document.getElementById('venusColorButton');
 const venusColorPanel = document.getElementById('venusColorPanel');
 
-// Flip color panel
+//Flip color panel
 function toggleVenusColors() {
     venusColorPanel.hidden = !venusColorPanel.hidden;
 
@@ -88,7 +97,7 @@ const trashImage = document.getElementById('trashImage');
 const cleanTrashResult = document.getElementById('cleanTrashResult');
 
 function cleanTheTrash() {
-    // fade animation, then gone for good
+    //fade animation, then gone for good
     trashImage.classList.add('cleaned');
     setTimeout(() => { trashImage.hidden = true; }, 600);
 
@@ -96,7 +105,7 @@ function cleanTheTrash() {
     cleanTrashButton.hidden = true;   //checker for empty
 }
 
-// only Earth page
+//only Earth page
 if (cleanTrashButton) {
     cleanTrashButton.addEventListener('click', cleanTheTrash);
 }
@@ -115,7 +124,7 @@ function launchSpaceship() {
     hasLaunched = !hasLaunched;
 
     if (hasLaunched) {
-        // distance of slide between ship and mars
+        //distance of slide between ship and mars
         const distance = marsFlightPath.clientWidth - marsCartoon.clientWidth - spaceship.clientWidth;
 
         spaceship.style.transform = `translateX(${distance}px)`;
@@ -126,7 +135,7 @@ function launchSpaceship() {
     }
 }
 
-// Only on the Mars page
+//Only on the Mars page
 if (launchButton) {
     launchButton.addEventListener('click', launchSpaceship);
 }
@@ -153,10 +162,6 @@ if (jupiter) {
     jupiter.addEventListener('click', () => {
         spinning = !spinning;
     });
-
-    //Spin faster while mouse hover
-    jupiter.addEventListener('mouseenter', () => { speed = 30; });
-    jupiter.addEventListener('mouseleave', () => { speed = 6; });
     requestAnimationFrame(rotateJ);
 }
 
@@ -169,7 +174,7 @@ const SATURN_WITHOUT_RINGS = '/src/images/saturnwithout.webp';
 
 let hasRings = true;
 
-// We swap src to change pictures
+//We swap src to change pictures
 function toggleRings() {
     hasRings = !hasRings;
 
@@ -184,7 +189,7 @@ function toggleRings() {
     }
 }
 
-// Only on the Saturn page
+//Only on the Saturn page
 if (ringsButton) {
     ringsButton.addEventListener('click', toggleRings);
 }
@@ -201,38 +206,38 @@ function toggleDiamondFact() {
     diamondButton.setAttribute('aria-expanded', String(!diamondPanel.hidden));
 }
 
-// Only on the Uranus page
+//Only on the Uranus page
 if (diamondButton) {
     diamondButton.addEventListener('click', toggleDiamondFact);
 }
 
 
-//Neptune feature
-const neptuneSpeed = document.getElementById('neptuneSpeed');
-const neptuneTravelButton = document.getElementById('neptuneTravelButton');
-const neptuneTravelResult = document.getElementById('neptuneTravelResult');
+//moon feature
+const moonSpeed = document.getElementById('moonSpeed');
+const moonTravelButton = document.getElementById('moonTravelButton');
+const moonTravelResult = document.getElementById('moonTravelResult');
 
-const MILES_TO_NEPTUNE = 2800000000;   // 2.8 billion miles from Earth
+const MILES_TO_MOON = 238855;   //200k miles from Earth
 
 function showTravelTime() {
-    const speed = Number(neptuneSpeed.value);
+    const speed = Number(moonSpeed.value);
 
-    // allow only non empty, non negative
-    if (neptuneSpeed.value === '' || Number.isNaN(speed) || speed <= 0) {
-        neptuneTravelResult.textContent = 'Please enter a speed greater than 0.';
+    //allow only non empty, non negative
+    if (moonSpeed.value === '' || Number.isNaN(speed) || speed <= 0) {
+        moonTravelResult.textContent = 'Please enter a speed greater than 0.';
         return;
     }
 
-    const hours = MILES_TO_NEPTUNE / speed;
-    neptuneTravelResult.textContent = `At ${speed} mph it would take ${hours.toLocaleString()} hours.`;
+    const hours = MILES_TO_MOON / speed;
+    moonTravelResult.textContent = `At ${speed} mph it would take ${hours.toLocaleString()} hours.`;
 }
 
-// Only on the Neptune page
-if (neptuneTravelButton) {
-    neptuneTravelButton.addEventListener('click', showTravelTime);
+//Only on the moon page
+if (moonTravelButton) {
+    moonTravelButton.addEventListener('click', showTravelTime);
 
-    // Pressing Enter in the box works too
-    neptuneSpeed.addEventListener('keydown', (event) => {
+    //Pressing Enter in the box works too
+    moonSpeed.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             showTravelTime();
         }

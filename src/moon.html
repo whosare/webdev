@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The moon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
+</head>
+<body class="moon">
+<nav class="navbar">
+    <ul>
+        <li>
+            <div class="planet" id="the sun">
+                <a href="sun.html">The Sun</a>
+            </div>
+        </li>
+        <li>
+            <div class="planet" id="mercury">
+                <a href="mercury.html">Mercury</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="venus">
+                <a href="venus.html">Venus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="earth">
+                <a href="earth.html">Earth</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="mars">
+                <a href="mars.html">Mars</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="jupiter">
+                <a href="jupiter.html">Jupiter</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="saturn">
+                <a href="saturn.html">Saturn</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="uranus">
+                <a href="uranus.html">Uranus</a>
+            </div>
+        </li>
+        <li>
+            <div
+                    class="planet" id="moon">
+                <a href="moon.html">Moon</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="moon-heading">
+    <h1 class="moon">The Moon!</h1>
+    <h2 class="moon">Welcome to the Moon</h2>
+</div>
+
+<hr>
+<div>
+<pre class="moon" id="preheader">
+    The moon is the 
+</pre>
+<h3 class="moon">Here are some fun facts about Jupiter</h3>
+</div>
+<div class="moon-first">
+    <img src="/src/images/moon1.webp" height="500" id="img1" alt="Moon full view">
+    <pre class="moon-first">
+        The moon has a radius of about 1,080 miles (1,740 kilometers), making
+        it a third of the size of the Earth
+
+        The moon rotates at the rate as it orbits the Earth, so the same area
+        always faces the Earth. 
+
+        Since the atmosphere of the Moon is not able to push away asteroids,
+        the Moon's surface is filled with craters, some as large as 52 miles!
+    </pre>
+</div>
+<div>
+<div class="imageIndent">
+    <img src="/src/images/moon2.jpeg" height="500" id="img2" alt="How the moon formed">
+    </div>
+        <pre class="moon">
+            The moon moves at 3.8 cm away from Earth each year.
+
+            The moon formed when roughly 4.5 billion years ago, a giant
+            asteroid hit Earth, and a piece of it stayed in Earth's
+            orbit.
+        </pre>
+</div>
+<div class="moon-calculator">
+    <p class="moon-calculator-text">How long would it take you to get to moon from Earth?</p>
+    <label class="moon-calculator-text" for="moonSpeed">Enter miles per hour speed:</label>
+    <input type="number" id="moonSpeed" min="1" placeholder="60">
+    <button type="button" id="moonTravelButton">Calculate</button>
+    <p class="moon-calculator-text" id="moonTravelResult"></p>
+</div>
+</body>
+</html>

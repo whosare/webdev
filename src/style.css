@@ -58,7 +58,77 @@ li{
     font-size: medium;
     inline-size: auto;
 }
-
+/*The sun*/
+body.sun{
+    background-color: #FFFFFF;
+}
+div.sun-heading{
+    background-color: #D14009;
+}
+h1.sun{
+    color: white;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2.sun{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+h3.sun{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D14009;
+    padding-left: 40px;
+    font-size: 40px;
+}
+pre.sun-heading{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D14009;
+    font-size: 35px;
+}
+div.sun-first{
+    background-color: #FC9601;
+    display: flex;
+}
+pre.sun-first{
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 31px;
+}
+div.sun-second{
+    background-color: #FFE484;
+    display: flex;
+}
+div.sun-lifecycle{
+    clear: both;
+    background-color: black;
+    padding: 20px;
+}
+p.sun-lifecycle-text{
+    font-family: "Russo One", sans-serif;
+    color: #D14009;
+    font-size: 24px;
+}
+#lifecycleButton{
+    font-family: "Russo One", sans-serif;
+    font-size: 20px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+.sun-stage{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
 /*Mercury*/
 body.mercury{
@@ -129,6 +199,9 @@ pre.venus{
     font-family: "Fira Code", monospace;
     font-size: 23px;
     left: 10px;
+}
+div.venus-heading{
+    background-color: #5C4033;
 }
 div.venus-colors{
     clear: both;
@@ -361,8 +434,21 @@ div.heading{
     background-color: darkgoldenrod;
     border: black solid 2px;
 }
+h1.jupiter{
+    font-family: Apple Chancery, cursive;
+    font-size: 50px;
+    color: white
+}
+h2.jupiter{
+    font-family: Apple Chancery, cursive;
+    font-size: 27px;
+    color: white
+}
 h3.jupiter{
+    font-family: Apple Chancery, cursive;
+    font-size: 28px;
     color: white;
+    padding-left: 30px;
 }
 div.jupiter-first{
     background-color:  	#d0a47a;
@@ -488,29 +574,30 @@ p.diamond-rain-text{
     padding: 10px;
 }
 
-/*Neptune*/
-body.neptune {
+/*Moon*/
+body.moon {
     margin: 0;
-    background-color: #5b5ddf;
+    background-color: #31302E;
 }
-div.neptune-heading{
-    background-color: #274687;
+div.moon-heading{
+    background-color: #F0F0F0;
     border: #070F2B;
 }
-h1.neptune{
+h1.moon{
     font-family: "BBH Bogle", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color:  	#d5d5ec
+    color:  	black;
+    font-size: 44px;
 }
-h2.neptune{
+h2.moon{
     font-family: "BBH Bogle", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    color:  	#d5d5ec
+    color:  black;
 }
-h3.neptune{
+h3.moon{
     font-family: "BBH Bogle", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -520,42 +607,49 @@ h3.neptune{
 #preheader{
     text-align: center;
 }
-pre.neptune{
+pre.moon-first{
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+}
+pre.moon{
     font-family: "BBH Bogle", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
     color: #d5d5ec;
 }
-div.neptune-first{
-    background-color:  	#3f54ba;
+div.moon-first{
+    background-color:  	#C3C2BE;
     display: flex;
 }
-div.neptune-second{
+div.moon-second{
     display: flex;
-    background-color:  	#85addb;
+    background-color:  	#c4cfcf;
 }
-div.neptune-calculator{
+div.moon-calculator{
     clear: both;
-    background-color:  	#274687;
+    background-color:  	#94908D;
     padding: 20px;
 }
-p.neptune-calculator-text, label.neptune-calculator-text{
+p.moon-calculator-text, label.moon-calculator-text{
     font-family: "BBH Bogle", sans-serif;
     font-size: 24px;
     color: #d5d5ec;
 }
-#neptuneSpeed{
+#moonSpeed{
     font-size: 20px;
     width: 120px;
     padding: 4px;
 }
-#neptuneTravelButton{
+#moonTravelButton{
     font-size: 20px;
     padding: 4px 12px;
     cursor: pointer;
 }
-#neptuneTravelResult{
+#moonTravelResult{
     font-weight: bold;
 }
 
